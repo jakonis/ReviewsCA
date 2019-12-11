@@ -1,8 +1,7 @@
 {
-  "name": "reviewca",
+  "name": "donationvue-1.0",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "alanas <20076515@wit.mail.ie>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -13,7 +12,6 @@
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
     "build": "node build/build.js"
   },
-
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap-vue": "^2.0.0-rc.11",
