@@ -1,8 +1,7 @@
 {
-  "name": "donationvue-1.0",
+  "name": "reviewsca",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "ddrohan <ddrohan@wit.ie>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",

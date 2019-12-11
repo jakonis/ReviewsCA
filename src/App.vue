@@ -7,8 +7,8 @@
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav>
           <b-nav-item to="/#"><i class="fa fa-home" style="padding: 5px"> Home</i></b-nav-item>
-          <b-nav-item to="/reviews"><i class="fa fa-list" style="padding: 5px"> Manage Reviews</i></b-nav-item>
-          <b-nav-item to="/donate"><i class="fa fa-money" style="padding: 5px"> Donate</i></b-nav-item>
+          <b-nav-item to="/reviews"><i class="fa fa-list-ul" style="padding: 5px"> Manage Reviews</i></b-nav-item>
+          <b-nav-item to="/review"><i class="fa fa-comments" style="padding: 5px"> Review</i></b-nav-item>
           <b-nav-item to="/map"><i class="fa fa-globe" style="padding: 5px"> Map</i></b-nav-item>
         </b-navbar-nav>
         <b-navbar-nav class="ml-auto">
