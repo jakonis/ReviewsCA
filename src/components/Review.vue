@@ -23,7 +23,6 @@
               <input class="form__input" v-model.trim="$v.user.$model"/>
             </div>
 
-
             <div class="form-group" :class="{ 'form-group--error': $v.message.$error }">
               <label class="form__label">Personal Message</label>
               <input class="form__input" v-model.trim="$v.message.$model"/>
@@ -44,6 +43,7 @@
 </template>
 
 <script>
+/* eslint-disable */
     import Vue from 'vue'
     import VueForm from 'vueform'
     import Vuelidate from 'vuelidate'
@@ -57,10 +57,11 @@
             valid: 'form-control-success',
             invalid: 'form-control-danger'
         }
-    })
+    });
 
-    Vue.use(Vuelidate)
-    Vue.use(VueSweetalert)
+
+    Vue.use(Vuelidate);
+    Vue.use(VueSweetalert);
 
     export default {
         name: 'Review',
@@ -87,36 +88,36 @@
         },
         methods: {
             submit () {
-                console.log('submit!')
-                this.$v.$touch()
+                console.log('submit!');
+                this.$v.$touch();
                 if (this.$v.$invalid) {
                     this.submitStatus = 'ERROR'
                 } else {
                     // do your submit logic here
-                    this.submitStatus = 'PENDING'
+                    this.submitStatus = 'PENDING';
                     setTimeout(() => {
-                        this.submitStatus = 'OK'
+                        this.submitStatus = 'OK';
                         this.review = {
                             stars: this.stars,
                             user: this.user,
                             upvotes: this.upvotes,
                             message: this.message
-                        }
-                        console.log('Submitting in ReviewForm : ' + JSON.stringify(this.review, null, 5))
+                        };
+                        console.log('Submitting in ReviewForm : ' + JSON.stringify(this.review, null, 5));
                         this.submitReview(this.review)
                     }, 500)
                 }
             },
             submitReview: function (review) {
-                console.log('submitReview!')
-                console.log('Submitting in submitReview : ' + review)
+                console.log('submitReview!');
+                console.log('Submitting in submitReview : ' + review);
                 ReviewService.postReviews(review)
                     .then(response => {
                         // JSON responses are automatically parsed.
                         console.log(response)
                     })
                     .catch(error => {
-                        this.errors.push(error)
+                        this.errors.push(error);
                         console.log(error)
                     })
             }

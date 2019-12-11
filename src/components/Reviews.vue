@@ -9,11 +9,12 @@
 </template>
 
 <script>
+/* eslint-disable */
     import Vue from 'vue'
     import VueTables from 'vue-tables-2'
     import ReviewService from "../services/reviewservice";
 
-    Vue.use(VueTables.ClientTable, {compileTemplates: true, filterByColumn: true})
+    Vue.use(VueTables.ClientTable, {compileTemplates: true, filterByColumn: true});
 
     export default {
         name: 'Reviews',
@@ -43,11 +44,11 @@
                 ReviewService.fetchReviews()
                     .then(response => {
                         // JSON responses are automatically parsed.
-                        this.reviews = response.data
+                        this.reviews = response.data;
                         console.log(this.reviews)
                     })
                     .catch(error => {
-                        this.errors.push(error)
+                        this.errors.push(error);
                         console.log(error)
                     })
 
